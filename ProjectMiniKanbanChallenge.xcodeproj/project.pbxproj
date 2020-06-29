@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FCE338124A79690003AD6CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE338024A79690003AD6CC /* AppDelegate.swift */; };
+		3FCE338324A79690003AD6CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE338224A79690003AD6CC /* SceneDelegate.swift */; };
+		3FCE338524A79690003AD6CC /* KanbanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE338424A79690003AD6CC /* KanbanVC.swift */; };
+		3FCE338A24A7969A003AD6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FCE338924A7969A003AD6CC /* Assets.xcassets */; };
+		3FCE338D24A7969A003AD6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCE338B24A7969A003AD6CC /* LaunchScreen.storyboard */; };
+		3FCE339724A79873003AD6CC /* KanbanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE339624A79873003AD6CC /* KanbanView.swift */; };
+		3FCE339B24A79B8B003AD6CC /* MKTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE339A24A79B8B003AD6CC /* MKTitleLabel.swift */; };
+		3FCE339E24A7A14B003AD6CC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE339D24A7A14B003AD6CC /* CardCollectionViewCell.swift */; };
+		3FCE33A124A7D2DE003AD6CC /* TodoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */; };
+		3FCE33A324A7D4C0003AD6CC /* DoingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FCE337D24A79690003AD6CC /* ProjectMiniKanbanChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMiniKanbanChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FCE338024A79690003AD6CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FCE338224A79690003AD6CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3FCE338424A79690003AD6CC /* KanbanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanVC.swift; sourceTree = "<group>"; };
+		3FCE338924A7969A003AD6CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FCE338C24A7969A003AD6CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3FCE338E24A7969A003AD6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FCE339624A79873003AD6CC /* KanbanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanView.swift; sourceTree = "<group>"; };
+		3FCE339A24A79B8B003AD6CC /* MKTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTitleLabel.swift; sourceTree = "<group>"; };
+		3FCE339D24A7A14B003AD6CC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCollectionViewController.swift; sourceTree = "<group>"; };
+		3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingCollectionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FCE337A24A7968F003AD6CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FCE337424A7968E003AD6CC = {
+			isa = PBXGroup;
+			children = (
+				3FCE337F24A79690003AD6CC /* ProjectMiniKanbanChallenge */,
+				3FCE337E24A79690003AD6CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FCE337E24A79690003AD6CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE337D24A79690003AD6CC /* ProjectMiniKanbanChallenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FCE337F24A79690003AD6CC /* ProjectMiniKanbanChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE339F24A7D2B5003AD6CC /* Controllers */,
+				3FCE339524A79841003AD6CC /* Custom Views */,
+				3FCE339424A797F9003AD6CC /* Screens */,
+				3FCE338024A79690003AD6CC /* AppDelegate.swift */,
+				3FCE338224A79690003AD6CC /* SceneDelegate.swift */,
+				3FCE338924A7969A003AD6CC /* Assets.xcassets */,
+				3FCE338B24A7969A003AD6CC /* LaunchScreen.storyboard */,
+				3FCE338E24A7969A003AD6CC /* Info.plist */,
+			);
+			path = ProjectMiniKanbanChallenge;
+			sourceTree = "<group>";
+		};
+		3FCE339424A797F9003AD6CC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE338424A79690003AD6CC /* KanbanVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3FCE339524A79841003AD6CC /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE339C24A7A124003AD6CC /* Cell */,
+				3FCE339924A79B3D003AD6CC /* Label */,
+				3FCE339824A798F7003AD6CC /* View */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		3FCE339824A798F7003AD6CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE339624A79873003AD6CC /* KanbanView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FCE339924A79B3D003AD6CC /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE339A24A79B8B003AD6CC /* MKTitleLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		3FCE339C24A7A124003AD6CC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE339D24A7A14B003AD6CC /* CardCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3FCE339F24A7D2B5003AD6CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */,
+				3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FCE337C24A7968F003AD6CC /* ProjectMiniKanbanChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FCE339124A7969A003AD6CC /* Build configuration list for PBXNativeTarget "ProjectMiniKanbanChallenge" */;
+			buildPhases = (
+				3FCE337924A7968F003AD6CC /* Sources */,
+				3FCE337A24A7968F003AD6CC /* Frameworks */,
+				3FCE337B24A7968F003AD6CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectMiniKanbanChallenge;
+			productName = ProjectMiniKanbanChallenge;
+			productReference = 3FCE337D24A79690003AD6CC /* ProjectMiniKanbanChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FCE337524A7968F003AD6CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Leonardo Maia Pugliese";
+				TargetAttributes = {
+					3FCE337C24A7968F003AD6CC = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 3FCE337824A7968F003AD6CC /* Build configuration list for PBXProject "ProjectMiniKanbanChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FCE337424A7968E003AD6CC;
+			productRefGroup = 3FCE337E24A79690003AD6CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FCE337C24A7968F003AD6CC /* ProjectMiniKanbanChallenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FCE337B24A7968F003AD6CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FCE338D24A7969A003AD6CC /* LaunchScreen.storyboard in Resources */,
+				3FCE338A24A7969A003AD6CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FCE337924A7968F003AD6CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FCE339B24A79B8B003AD6CC /* MKTitleLabel.swift in Sources */,
+				3FCE33A124A7D2DE003AD6CC /* TodoCollectionViewController.swift in Sources */,
+				3FCE33A324A7D4C0003AD6CC /* DoingCollectionViewController.swift in Sources */,
+				3FCE338524A79690003AD6CC /* KanbanVC.swift in Sources */,
+				3FCE338124A79690003AD6CC /* AppDelegate.swift in Sources */,
+				3FCE339724A79873003AD6CC /* KanbanView.swift in Sources */,
+				3FCE339E24A7A14B003AD6CC /* CardCollectionViewCell.swift in Sources */,
+				3FCE338324A79690003AD6CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FCE338B24A7969A003AD6CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FCE338C24A7969A003AD6CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FCE338F24A7969A003AD6CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FCE339024A7969A003AD6CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FCE339224A7969A003AD6CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ProjectMiniKanbanChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leo.minikanban.ProjectMiniKanbanChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FCE339324A7969A003AD6CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ProjectMiniKanbanChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leo.minikanban.ProjectMiniKanbanChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FCE337824A7968F003AD6CC /* Build configuration list for PBXProject "ProjectMiniKanbanChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FCE338F24A7969A003AD6CC /* Debug */,
+				3FCE339024A7969A003AD6CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FCE339124A7969A003AD6CC /* Build configuration list for PBXNativeTarget "ProjectMiniKanbanChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FCE339224A7969A003AD6CC /* Debug */,
+				3FCE339324A7969A003AD6CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FCE337524A7968F003AD6CC /* Project object */;
+}
