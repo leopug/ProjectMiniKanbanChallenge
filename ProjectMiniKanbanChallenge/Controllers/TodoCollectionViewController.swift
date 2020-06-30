@@ -13,7 +13,7 @@ class TodoCollectionViewController : NSObject {
     var titles: [String] = ["One", "TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo", "Three", "Four", "Five", "Six", "Seven", "Eight"]
 }
 
-extension TodoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+extension TodoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         titles.count
@@ -24,10 +24,4 @@ extension TodoCollectionViewController: UICollectionViewDelegate, UICollectionVi
         cell.titleLabel.text = titles[indexPath.item]
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //collectionViewLayout
-        return CGSize(width: UIScreen.main.bounds.width * 0.29, height: 160)
-    }
-    
 }

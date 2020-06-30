@@ -10,53 +10,37 @@ import UIKit
 
 class KanbanVC: UIViewController {
 
+    
+    var todoDelegate: TodoCollectionViewController?
+    var doingDelegate: DoingCollectionViewController?
+    
     override func loadView() {
         super.loadView()
         view = KanbanView(frame: view.bounds, todoDelegate: TodoCollectionViewController(), doingDelegate: DoingCollectionViewController())
     }
     
+    init(todoDelegate: TodoCollectionViewController , doingDelegate: DoingCollectionViewController) {
+        super.init(nibName: nil, bundle: nil)
+        self.todoDelegate = todoDelegate
+        self.doingDelegate = doingDelegate
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
         super.viewWillTransition(to: size, with: coordinator)
-        let kanbanView = view as! KanbanView
-
-        if UIDevice.current.orientation.isLandscape,
-            let layout = kanbanView.todoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-//            //let cellWidthHeightConstant: CGFloat = UIScreen.main.bounds.width * 0.29
-//
-//                   //let width = UIScreen.main.bounds.width - 22
-//            //        let size = CGSize(width: width - 16, height: 160)
-//
-//                    //let width = UIScreen.main.bounds.width - 22
-//                    let size = CGSize(width: UIScreen.main.bounds.width * 0.29, height: 160)
-//
-//                    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//                    layout.scrollDirection = .vertical
-//                    layout.minimumInteritemSpacing = 0
-//                    layout.minimumLineSpacing = 0
-//                    //layout.itemSize = CGSize(width: cellWidthHeightConstant, height: cellWidthHeightConstant)
-//                    layout.itemSize = size
-//            layout.invalidateLayout()
-            
-        } else if UIDevice.current.orientation.isPortrait,
-            let layout = kanbanView.todoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-                    //let cellWidthHeightConstant: CGFloat = UIScreen.main.bounds.width * 0.29
-//
-//                   //let width = UIScreen.main.bounds.width - 22
-//            //        let size = CGSize(width: width - 16, height: 160)
-//
-//                    //let width = UIScreen.main.bounds.width - 22
-//                    let size = CGSize(width: UIScreen.main.bounds.width * 0.28, height: 160)
-//
-//                    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//                    layout.scrollDirection = .vertical
-//                    layout.minimumInteritemSpacing = 0
-//                    layout.minimumLineSpacing = 0
-//                    //layout.itemSize = CGSize(width: cellWidthHeightConstant, height: cellWidthHeightConstant)
-//                    layout.itemSize = size
-//            layout.invalidateLayout()
-            
-        }
+        guard let kanbanView = view as? KanbanView,
+            let todoLayout = kanbanView.todoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout,
+            let _ = kanbanView.doingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        else { return}
+        
+        
+        let newSize = CGSize(width: size.width * 0.29, height: 160)
+        todoLayout.itemSize = newSize
+        todoLayout.invalidateLayout()
     }
     
     
