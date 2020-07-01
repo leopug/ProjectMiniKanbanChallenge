@@ -10,7 +10,8 @@ import UIKit
 
 class KanbanVC: UIViewController {
 
-    
+    typealias CollectionViewDelegate = UICollectionViewDelegate & UICollectionViewDataSource
+
     var todoDelegate: TodoCollectionViewController?
     var doingDelegate: DoingCollectionViewController?
     
@@ -34,7 +35,7 @@ class KanbanVC: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let kanbanView = view as? KanbanView,
             let todoLayout = kanbanView.todoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout,
-            let _ = kanbanView.doingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+            let doingLayout = kanbanView.doingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         else { return}
         
         
