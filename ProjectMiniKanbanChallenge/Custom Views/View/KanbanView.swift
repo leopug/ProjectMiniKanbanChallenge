@@ -63,33 +63,29 @@ class KanbanView: UIView {
     }
     
     func configureDoneCollectionView() {
-        doneCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
-        addSubview(doneCollectionView)
-        doneCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        
+        doneCollectionView = UICollectionView.createViewCodeUICollectionView(self, layout: collectionViewLayout())
         doneCollectionView.delegate = doneDelegate
         doneCollectionView.dataSource = doneDelegate
-        
         doneCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reuseID)
-        doneCollectionView.backgroundColor = .white
+        
+        doneCollectionView.backgroundColor = .clear
 
         NSLayoutConstraint.activate([
             doneCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
             doneCollectionView.leadingAnchor.constraint(equalTo: doingCollectionView.trailingAnchor),
-            doneCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -padding),
+            doneCollectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
             doneCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
         
     }
     
     private func configureDoingCollectionView() {
-        doingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
-        addSubview(doingCollectionView)
-        doingCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        doingCollectionView = UICollectionView.createViewCodeUICollectionView(self, layout: collectionViewLayout())
         doingCollectionView.delegate = doingDelegate
         doingCollectionView.dataSource = doingDelegate
         doingCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reuseID)
-        doingCollectionView.backgroundColor = .white
+        
+        doingCollectionView.backgroundColor = .clear
         
         NSLayoutConstraint.activate([
             doingCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
@@ -99,18 +95,17 @@ class KanbanView: UIView {
         ])
     }
     
-    fileprivate func configureTodoCollectionView() {
-        todoCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
-        addSubview(todoCollectionView)
-        todoCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    private func configureTodoCollectionView() {
+        todoCollectionView = UICollectionView.createViewCodeUICollectionView(self, layout: collectionViewLayout())
         todoCollectionView.delegate = todoDelegate
         todoCollectionView.dataSource = todoDelegate
         todoCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reuseID)
-        todoCollectionView.backgroundColor = .white
+        
+        todoCollectionView.backgroundColor = .clear
         
         NSLayoutConstraint.activate([
             todoCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
-            todoCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            todoCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 15),
             todoCollectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
             todoCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])

@@ -36,13 +36,17 @@ class KanbanVC: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let kanbanView = view as? KanbanView,
             let todoLayout = kanbanView.todoCollectionView.collectionViewLayout as? UICollectionViewFlowLayout,
-            let doingLayout = kanbanView.doingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
-        else { return}
+            let doingLayout = kanbanView.doingCollectionView.collectionViewLayout as? UICollectionViewFlowLayout,
+            let doneLayout = kanbanView.doneCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        else { return }
         
+        let layouts = [todoLayout,doingLayout,doneLayout]
         
-        let newSize = CGSize(width: size.width * 0.29, height: 160)
-        todoLayout.itemSize = newSize
-        todoLayout.invalidateLayout()
+        for layout in layouts {
+            let newSize = CGSize(width: size.width * 0.29, height: 160)
+            layout.itemSize = newSize
+            layout.invalidateLayout()
+        }
     }
     
     

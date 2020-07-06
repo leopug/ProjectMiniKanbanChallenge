@@ -18,6 +18,7 @@
 		3FCE33A124A7D2DE003AD6CC /* TodoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */; };
 		3FCE33A324A7D4C0003AD6CC /* DoingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */; };
 		44A596DD24B38CDB00C14061 /* DoneCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A596DC24B38CDB00C14061 /* DoneCollectionViewController.swift */; };
+		44A596E024B390B100C14061 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A596DF24B390B100C14061 /* UICollectionView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCollectionViewController.swift; sourceTree = "<group>"; };
 		3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingCollectionViewController.swift; sourceTree = "<group>"; };
 		44A596DC24B38CDB00C14061 /* DoneCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCollectionViewController.swift; sourceTree = "<group>"; };
+		44A596DF24B390B100C14061 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		3FCE339524A79841003AD6CC /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				44A596DE24B3909900C14061 /* Extensions */,
 				3FCE339C24A7A124003AD6CC /* Cell */,
 				3FCE339924A79B3D003AD6CC /* Label */,
 				3FCE339824A798F7003AD6CC /* View */,
@@ -128,6 +131,14 @@
 				44A596DC24B38CDB00C14061 /* DoneCollectionViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44A596DE24B3909900C14061 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44A596DF24B390B100C14061 /* UICollectionView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 				3FCE33A124A7D2DE003AD6CC /* TodoCollectionViewController.swift in Sources */,
 				44A596DD24B38CDB00C14061 /* DoneCollectionViewController.swift in Sources */,
 				3FCE33A324A7D4C0003AD6CC /* DoingCollectionViewController.swift in Sources */,
+				44A596E024B390B100C14061 /* UICollectionView+Ext.swift in Sources */,
 				3FCE338524A79690003AD6CC /* KanbanVC.swift in Sources */,
 				3FCE338124A79690003AD6CC /* AppDelegate.swift in Sources */,
 				3FCE339724A79873003AD6CC /* KanbanView.swift in Sources */,
