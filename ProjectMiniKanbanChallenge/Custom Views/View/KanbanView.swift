@@ -19,11 +19,14 @@ class KanbanView: UIView {
     var padding : CGFloat = 15
     var todoDelegate : CollectionViewDelegate!
     var doingDelegate : CollectionViewDelegate!
+    var doneDelegate : CollectionViewDelegate!
+
     
-    init(frame: CGRect, todoDelegate: CollectionViewDelegate, doingDelegate: CollectionViewDelegate) {
+    init(frame: CGRect, todoDelegate: CollectionViewDelegate, doingDelegate: CollectionViewDelegate, doneDelegate: CollectionViewDelegate) {
         super.init(frame: frame)
         self.todoDelegate = todoDelegate
         self.doingDelegate = doingDelegate
+        self.doneDelegate = doneDelegate
         configureUI()
     }
 
@@ -55,6 +58,27 @@ class KanbanView: UIView {
         
         configureTodoCollectionView()
         configureDoingCollectionView()
+        configureDoneCollectionView()
+        
+    }
+    
+    func configureDoneCollectionView() {
+        doneCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
+        addSubview(doneCollectionView)
+        doneCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        doneCollectionView.delegate = doneDelegate
+        doneCollectionView.dataSource = doneDelegate
+        
+        doneCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reuseID)
+        doneCollectionView.backgroundColor = .white
+
+        NSLayoutConstraint.activate([
+            doneCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
+            doneCollectionView.leadingAnchor.constraint(equalTo: doingCollectionView.trailingAnchor),
+            doneCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -padding),
+            doneCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        ])
         
     }
     
@@ -86,7 +110,7 @@ class KanbanView: UIView {
         
         NSLayoutConstraint.activate([
             todoCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
-            todoCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            todoCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 8),
             todoCollectionView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.3),
             todoCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])

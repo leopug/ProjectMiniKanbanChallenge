@@ -15,9 +15,10 @@ class KanbanVC: UIViewController {
     var todoDelegate: TodoCollectionViewController?
     var doingDelegate: DoingCollectionViewController?
     
+    
     override func loadView() {
         super.loadView()
-        view = KanbanView(frame: view.bounds, todoDelegate: TodoCollectionViewController(), doingDelegate: DoingCollectionViewController())
+        view = KanbanView(frame: view.bounds, todoDelegate: TodoCollectionViewController(), doingDelegate: DoingCollectionViewController(), doneDelegate: DoneCollectionViewController())
     }
     
     init(todoDelegate: TodoCollectionViewController , doingDelegate: DoingCollectionViewController) {

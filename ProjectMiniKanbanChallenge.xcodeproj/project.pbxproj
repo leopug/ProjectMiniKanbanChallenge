@@ -17,6 +17,7 @@
 		3FCE339E24A7A14B003AD6CC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE339D24A7A14B003AD6CC /* CardCollectionViewCell.swift */; };
 		3FCE33A124A7D2DE003AD6CC /* TodoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */; };
 		3FCE33A324A7D4C0003AD6CC /* DoingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */; };
+		44A596DD24B38CDB00C14061 /* DoneCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A596DC24B38CDB00C14061 /* DoneCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3FCE339D24A7A14B003AD6CC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCollectionViewController.swift; sourceTree = "<group>"; };
 		3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingCollectionViewController.swift; sourceTree = "<group>"; };
+		44A596DC24B38CDB00C14061 /* DoneCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				3FCE33A024A7D2DE003AD6CC /* TodoCollectionViewController.swift */,
 				3FCE33A224A7D4C0003AD6CC /* DoingCollectionViewController.swift */,
+				44A596DC24B38CDB00C14061 /* DoneCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				3FCE339B24A79B8B003AD6CC /* MKTitleLabel.swift in Sources */,
 				3FCE33A124A7D2DE003AD6CC /* TodoCollectionViewController.swift in Sources */,
+				44A596DD24B38CDB00C14061 /* DoneCollectionViewController.swift in Sources */,
 				3FCE33A324A7D4C0003AD6CC /* DoingCollectionViewController.swift in Sources */,
 				3FCE338524A79690003AD6CC /* KanbanVC.swift in Sources */,
 				3FCE338124A79690003AD6CC /* AppDelegate.swift in Sources */,
