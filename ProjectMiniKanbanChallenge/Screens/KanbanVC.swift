@@ -48,7 +48,5 @@ class KanbanVC: UIViewController {
             layout.invalidateLayout()
         }
     }
-    
-    
 }
 
