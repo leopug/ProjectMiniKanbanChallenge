@@ -13,7 +13,12 @@ class TodoCollectionViewController : NSObject {
     var titles: [String] = ["One", "TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo", "Three", "Four", "Five", "Six", "Seven", "Eight"]
 }
 
-extension TodoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource  {
+extension TodoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDragDelegate  {
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        return [UIDragItem(itemProvider: NSItemProvider(item: "lol" as NSData, typeIdentifier: ))]
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         titles.count

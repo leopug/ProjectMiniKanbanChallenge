@@ -69,5 +69,13 @@ class CardCollectionViewCell: UICollectionViewCell {
             titleLabel.heightAnchor.constraint(equalTo: roundedBackgroundView.heightAnchor, multiplier: 0.8)
         ])
     }
-    
 }
+
+//extension CardCollectionViewCell: UICollectionViewDragDelegate {
+//    
+//    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+//        
+//        
+//        
+//    }
+//}

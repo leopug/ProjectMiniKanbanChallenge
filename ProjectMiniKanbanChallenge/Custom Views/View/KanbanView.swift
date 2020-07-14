@@ -10,7 +10,7 @@ import UIKit
 
 class KanbanView: UIView {
     
-    typealias CollectionViewDelegate = UICollectionViewDelegate & UICollectionViewDataSource
+    typealias CollectionViewDelegate = UICollectionViewDelegate & UICollectionViewDataSource & UICollectionViewDragDelegate
     
     var titleLabel : UILabel!
     var todoCollectionView : UICollectionView!
@@ -100,6 +100,7 @@ class KanbanView: UIView {
         todoCollectionView.delegate = todoDelegate
         todoCollectionView.dataSource = todoDelegate
         todoCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reuseID)
+        todoCollectionView.dragDelegate = todoDelegate
         
         todoCollectionView.backgroundColor = .clear
         
