@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = KanbanVC(todoDelegate: TodoCollectionViewController(), doingDelegate: DoingCollectionViewController())
+        window?.rootViewController = KanbanVC(todoDelegate: TodoCollectionViewController(), doingDelegate: DoingCollectionViewController(), doneDelegate: DoneCollectionViewController())
         window?.makeKeyAndVisible()
         
     }

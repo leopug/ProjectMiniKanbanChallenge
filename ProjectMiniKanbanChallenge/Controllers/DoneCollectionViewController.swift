@@ -10,18 +10,29 @@ import UIKit
 
 class DoneCollectionViewController : NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var titles: [String] = ["One", "Two", "Three","testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest","testetteste"]
+    var cards: [String] = ["One", "Two", "Three","testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest","testetteste"]
 }
 
 extension DoneCollectionViewController  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        titles.count
+        cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.reuseID, for: indexPath) as! CardCollectionViewCell
-        cell.titleLabel.text = titles[indexPath.item]
+        cell.titleLabel.text = cards[indexPath.item]
         return cell
+    }
+}
+
+extension DoneCollectionViewController: UICollectionViewDragDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let item = self.cards[indexPath.row]
+        let itemProvider = NSItemProvider(object: item as NSString)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = item
+        return [dragItem]
     }
 }

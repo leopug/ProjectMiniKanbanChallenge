@@ -70,12 +70,3 @@ class CardCollectionViewCell: UICollectionViewCell {
         ])
     }
 }
-
-//extension CardCollectionViewCell: UICollectionViewDragDelegate {
-//    
-//    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-//        
-//        
-//        
-//    }
-//}

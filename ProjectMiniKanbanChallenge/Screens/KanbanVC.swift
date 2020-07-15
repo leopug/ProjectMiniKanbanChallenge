@@ -14,6 +14,7 @@ class KanbanVC: UIViewController {
 
     var todoDelegate: TodoCollectionViewController?
     var doingDelegate: DoingCollectionViewController?
+    var doneDelegate: DoneCollectionViewController?
     
     
     override func loadView() {
@@ -21,10 +22,11 @@ class KanbanVC: UIViewController {
         view = KanbanView(frame: view.bounds, todoDelegate: TodoCollectionViewController(), doingDelegate: DoingCollectionViewController(), doneDelegate: DoneCollectionViewController())
     }
     
-    init(todoDelegate: TodoCollectionViewController , doingDelegate: DoingCollectionViewController) {
+    init(todoDelegate: TodoCollectionViewController , doingDelegate: DoingCollectionViewController, doneDelegate: DoneCollectionViewController) {
         super.init(nibName: nil, bundle: nil)
         self.todoDelegate = todoDelegate
         self.doingDelegate = doingDelegate
+        self.doneDelegate = doneDelegate
     }
     
     required init?(coder: NSCoder) {

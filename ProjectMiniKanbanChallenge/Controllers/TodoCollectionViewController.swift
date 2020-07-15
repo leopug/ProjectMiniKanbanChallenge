@@ -10,23 +10,27 @@ import UIKit
 
 class TodoCollectionViewController : NSObject {
     
-    var titles: [String] = ["One", "TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo", "Three", "Four", "Five", "Six", "Seven", "Eight"]
+    var cards = ["One", "TwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwoTwo", "Three", "Four", "Five", "Six", "Seven", "Eight"]
 }
 
 extension TodoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDragDelegate  {
     
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-        return [UIDragItem(itemProvider: NSItemProvider(item: "lol" as NSData, typeIdentifier: ))]
+        let item = self.cards[indexPath.row]
+        let itemProvider = NSItemProvider(object: item as NSString)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = item
+        return [dragItem]
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        titles.count
+        cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.reuseID, for: indexPath) as! CardCollectionViewCell
-        cell.titleLabel.text = titles[indexPath.item]
+        cell.titleLabel.text = cards[indexPath.item]
         return cell
     }
 }

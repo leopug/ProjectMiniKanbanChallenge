@@ -101,6 +101,7 @@ class KanbanView: UIView {
         todoCollectionView.dataSource = todoDelegate
         todoCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.reuseID)
         todoCollectionView.dragDelegate = todoDelegate
+        todoCollectionView.dragInteractionEnabled = true
         
         todoCollectionView.backgroundColor = .clear
         
